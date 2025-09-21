@@ -33,7 +33,6 @@ typedef struct
 
 void draw_image(unsigned char *data, int width, int height, int row_padded, SDL_Surface *surface);
 
-
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -113,7 +112,6 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-
 void draw_image(unsigned char *data, int width, int height, int row_padded, SDL_Surface *surface)
 {
     Uint32 color;
@@ -125,9 +123,9 @@ void draw_image(unsigned char *data, int width, int height, int row_padded, SDL_
         {
             int index = y * row_padded + x * 3;
 
-            unsigned char blue  = data[index];
+            unsigned char blue = data[index];
             unsigned char green = data[index + 1];
-            unsigned char red   = data[index + 2];
+            unsigned char red = data[index + 2];
 
             color = SDL_MapRGB(surface->format, red, green, blue);
 
